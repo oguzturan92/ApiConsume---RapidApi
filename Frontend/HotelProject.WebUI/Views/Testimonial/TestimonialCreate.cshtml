@@ -1,0 +1,21 @@
+@model TestimonialCreateModel
+@{
+    ViewData["Title"] = "Referans Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Testimonial" asp-action="TestimonialCreate" method="post">
+    <h3>REFERANS EKLE</h3>
+    <hr>
+    <label>Adı</label>
+    <input type="text" asp-for="TestimonialName" class="form-control">
+    <label>Ünvanı</label>
+    <input type="text" asp-for="TestimonialTitle" class="form-control">
+    <label>Açıklama</label>
+    <input type="text" asp-for="TestimonialDescription" class="form-control">
+    <label>Resim</label>
+    <input type="text" asp-for="TestimonialImage" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Testimonial" asp-action="TestimonialList">Geri</a>
+</form>

@@ -1,0 +1,17 @@
+@model WorkLocationCreateDto
+@{
+    ViewData["Title"] = "Çalışma Alanı Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="WorkLocation" asp-action="WorkLocationCreate" method="post">
+    <h3>ÇALIŞMA ALANI EKLE</h3>
+    <hr>
+    <label>Başlık</label>
+    <input type="text" asp-for="WorkLocationName" class="form-control">
+    <label>Şehir</label>
+    <input type="text" asp-for="WorkLocationCity" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="WorkLocation" asp-action="WorkLocationList">Geri</a>
+</form>

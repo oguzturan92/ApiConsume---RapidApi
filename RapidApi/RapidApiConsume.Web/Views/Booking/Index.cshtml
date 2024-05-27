@@ -1,0 +1,41 @@
+@model BookingModel
+@{
+    ViewData["Title"] = "Index";
+    var count = 0;
+}
+
+
+<div class="container border">
+    
+    <form asp-controller="Booking" asp-action="Index" method="get" class="border p-3 mt-3">
+        <label>Giriş Tarihi</label>
+        <input type="date" name="checkin" class="form-control">
+        <label>Çıkış Tarihi</label>
+        <input type="date" name="checkout" class="form-control">
+        <button type="submit" class="btn btn-primary mt-2">Ara</button>
+    </form>
+    
+    <table class="table table-bordered">
+        <hr>
+        <h1 class="text-center">OTELLER / BOOKİNG</h1>
+        <hr>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ad</th>
+                <th>Puan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.data)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.name</td>
+                    <td>@item.reviewScore</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

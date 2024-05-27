@@ -1,0 +1,9 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="File" asp-action="Index" method="post">
+    <input type="file" name="file" id="" class="form-control">
+    <button type="submit" class="btn btn-primary mt-3">Kaydet</button>
+</form>

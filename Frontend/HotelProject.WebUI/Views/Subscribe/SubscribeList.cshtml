@@ -1,0 +1,27 @@
+@model List<SubscribeListDto>
+@{
+    ViewData["Title"] = "Abone Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>ABONE LİSTESİ</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Mail</th>
+            <th colspan="1"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SubscribeId</td>
+                <td>@item.SubscribeMail</td>
+                <td><a class="btn btn-danger" asp-controller="Subscribe" asp-action="SubscribeDelete" asp-route-id="@item.SubscribeId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

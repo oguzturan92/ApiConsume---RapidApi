@@ -1,0 +1,25 @@
+@model AboutCreateDto
+@{
+    ViewData["Title"] = "Hakkımızda Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="About" asp-action="AboutCreate" method="post">
+    <h3>HAKKIMIZDA EKLE</h3>
+    <hr>
+    <label>Adı</label>
+    <input type="text" asp-for="AboutTitle1" class="form-control">
+    <label>Ünvanı</label>
+    <input type="text" asp-for="AboutTitle2" class="form-control">
+    <label>Açıklama</label>
+    <input type="text" asp-for="AboutContent" class="form-control">
+    <label>Resim</label>
+    <input type="text" asp-for="AboutRoomCount" class="form-control">
+    <label>Resim</label>
+    <input type="text" asp-for="AboutStaffCount" class="form-control">
+    <label>Resim</label>
+    <input type="text" asp-for="AboutCustomerCount" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="About" asp-action="AboutList">Geri</a>
+</form>

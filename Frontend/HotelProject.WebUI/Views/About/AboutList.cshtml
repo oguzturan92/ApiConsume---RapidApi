@@ -1,0 +1,31 @@
+@model List<AboutListDto>
+@{
+    ViewData["Title"] = "Hakkımızda Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>HAKKIMIZDA LİSTESİ</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Başlık 1</th>
+            <th>Başlık 2</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AboutId</td>
+                <td>@item.AboutTitle1</td>
+                <td>@item.AboutTitle2</td>
+                <td><a class="btn btn-primary" asp-controller="About" asp-action="AboutUpdate" asp-route-id="@item.AboutId">Güncelle</a></td>
+                <td><a class="btn btn-danger" asp-controller="About" asp-action="AboutDelete" asp-route-id="@item.AboutId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-success" asp-controller="About" asp-action="AboutCreate">Yeni Oluştur</a>

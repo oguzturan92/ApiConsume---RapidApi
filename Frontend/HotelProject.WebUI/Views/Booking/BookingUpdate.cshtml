@@ -1,0 +1,49 @@
+@model BookingUpdateDto
+@{
+    ViewData["Title"] = "Rezervasyon Güncelle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Booking" asp-action="BookingUpdate" method="post">
+    <h3>REZERVASYON GÜNCELLE</h3>
+    <hr>
+    <input type="hidden" asp-for="BookingId">
+    <label>Ad Soyad</label>
+    <input type="text" asp-for="BookingName" class="form-control">
+    <span asp-validation-for="BookingName" class="text-danger d-block"></span>
+    <label>Email</label>
+    <input type="text" asp-for="BookingMail" class="form-control">
+    <span asp-validation-for="BookingMail" class="text-danger d-block"></span>
+    <label>Giriş</label>
+    <input type="text" asp-for="BookingCheckin" class="form-control">
+    <span asp-validation-for="BookingCheckin" class="text-danger d-block"></span>
+    <label>Çıkış</label>
+    <input type="text" asp-for="BookingCheckout" class="form-control">
+    <span asp-validation-for="BookingCheckout" class="text-danger d-block"></span>
+    <label>Kişi Sayısı</label>
+    <input type="text" asp-for="BookingAdultCount" class="form-control">
+    <span asp-validation-for="BookingAdultCount" class="text-danger d-block"></span>
+    <label>Çocuk Sayısı</label>
+    <input type="text" asp-for="BookingChildCount" class="form-control">
+    <span asp-validation-for="BookingChildCount" class="text-danger d-block"></span>
+    <label>Oda Sayısı</label>
+    <input type="text" asp-for="BookingRoomCount" class="form-control">
+    <span asp-validation-for="BookingRoomCount" class="text-danger d-block"></span>
+    <label>Not</label>
+    <input type="text" asp-for="BookingSpecialRequest" class="form-control">
+    <span asp-validation-for="BookingSpecialRequest" class="text-danger d-block"></span>
+    <label>Açıklama</label>
+    <input type="text" asp-for="BookingDescription" class="form-control">
+    <span asp-validation-for="BookingDescription" class="text-danger d-block"></span>
+    <label>Onay Durumu</label>
+    <select class="form-control" asp-for="BookingStatus" aria-label="Default select example">
+        <option value="Onaylandı">Onaylandı</option>
+        <option value="Onay Bekliyor">Onay Bekliyor</option>
+        <option value="İptal Edildi">İptal Edildi</option>
+        <option value="Beklemede">Beklemede</option>
+    </select>
+    <span asp-validation-for="BookingStatus" class="text-danger d-block"></span>
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Booking" asp-action="BookingList">Geri</a>
+</form>

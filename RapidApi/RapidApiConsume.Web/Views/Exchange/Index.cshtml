@@ -1,0 +1,30 @@
+@model List<ExchangeModel.Exchange_rates>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<div class="container border">
+    <table class="table table-bordered">
+        <hr>
+        <h1 class="text-center">KUR LİSTESİ</h1>
+        <hr>
+        <thead>
+            <tr>
+                <th>Kodu</th>
+                <th>Fiyat</th>
+                <th>Fragman</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.currency</td>
+                    <td>@item.exchange_rate_buy</td>
+                    <td><a href="#" class="btn btn-primary">İzle</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

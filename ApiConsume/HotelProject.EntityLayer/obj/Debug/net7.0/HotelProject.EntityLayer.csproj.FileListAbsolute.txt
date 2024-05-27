@@ -1,0 +1,12 @@
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\bin\Debug\net7.0\HotelProject.EntityLayer.deps.json
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\bin\Debug\net7.0\HotelProject.EntityLayer.dll
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\bin\Debug\net7.0\HotelProject.EntityLayer.pdb
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.AssemblyInfo.cs
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.dll
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\refint\HotelProject.EntityLayer.dll
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.pdb
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\ref\HotelProject.EntityLayer.dll
+C:\Users\proje\API-RapidApi-ApiConsume\ApiConsume\HotelProject.EntityLayer\obj\Debug\net7.0\HotelProject.EntityLayer.csproj.AssemblyReference.cache

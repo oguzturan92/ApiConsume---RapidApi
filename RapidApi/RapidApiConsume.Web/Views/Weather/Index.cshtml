@@ -1,0 +1,11 @@
+@model WeatherModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p class="border">Ülke : @Model.location.country</p>
+<p class="border">Şehir : @Model.location.city</p>
+@foreach (var item in Model.forecasts)
+{
+    <p class="border">Gün : @item.day ve @item.text</p>
+}

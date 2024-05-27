@@ -1,0 +1,20 @@
+@model ContactUpdateDto
+@{
+    ViewData["Title"] = "Mesaj Detay";
+    Layout = "_LayoutAdmin";
+}
+
+<form>
+    <h3>MESAJ DETAY</h3>
+    <hr>
+    <label>Tarih</label>
+    <input type="text" asp-for="ContactDate" class="form-control" disabled>
+    <label>Adı</label>
+    <input type="text" asp-for="ContactName" class="form-control" disabled>
+    <label>Email</label>
+    <input type="text" asp-for="ContactEmail" class="form-control" disabled>
+    <label>Mesaj</label>
+    <input type="text" asp-for="ContactMessage" class="form-control" disabled>
+    <hr>
+    <a class="btn btn-outline-dark" asp-controller="Contact" asp-action="ContactList">Geri</a>
+</form>

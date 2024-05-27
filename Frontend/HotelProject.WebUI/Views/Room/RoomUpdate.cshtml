@@ -1,0 +1,28 @@
+@model RoomUpdateDto
+@{
+    ViewData["Title"] = "Oda Güncelle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Room" asp-action="RoomUpdate" method="post">
+    <h3>ODA GÜNCELLE</h3>
+    <hr>
+    <input type="hidden" asp-for="RoomId">
+    <label>Numarası</label>
+    <input type="text" asp-for="RoomNumber" class="form-control">
+    <label>Açıklama</label>
+    <input type="text" asp-for="RoomDescription" class="form-control">
+    <label>Resim</label>
+    <input type="text" asp-for="RoomCoverImage" class="form-control">
+    <label>Fiyat</label>
+    <input type="text" asp-for="RoomPrice" class="form-control">
+    <label>Başlık</label>
+    <input type="text" asp-for="RoomTitle" class="form-control">
+    <label>Yatak Sayısı</label>
+    <input type="text" asp-for="RoomBedCount" class="form-control">
+    <label>Banyo Sayısı</label>
+    <input type="text" asp-for="RoomBathCount" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Room" asp-action="RoomList">Geri</a>
+</form>

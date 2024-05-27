@@ -1,0 +1,26 @@
+@model StaffUpdateModel
+@{
+    ViewData["Title"] = "Personel Güncelle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Staff" asp-action="StaffUpdate" method="post">
+    <h3>PERSONEL GÜNCELLE</h3>
+    <hr>
+    <input type="hidden" asp-for="StaffId">
+    <label>Adı</label>
+    <input type="text" asp-for="StaffName" class="form-control">
+    <label>Ünvanı</label>
+    <input type="text" asp-for="StaffTitle" class="form-control">
+    <label>Resim</label>
+    <input type="text" asp-for="StaffImage" class="form-control">
+    <label>Sosyal Medya 1</label>
+    <input type="text" asp-for="StaffSocialMedia1" class="form-control">
+    <label>Sosyal Medya 2</label>
+    <input type="text" asp-for="StaffSocialMedia2" class="form-control">
+    <label>Sosyal Medya 3</label>
+    <input type="text" asp-for="StaffSocialMedia3" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Staff" asp-action="StaffList">Geri</a>
+</form>

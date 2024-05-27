@@ -1,0 +1,32 @@
+@model List<ImdbModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<div class="container border">
+    <table class="table table-bordered">
+        <hr>
+        <h1 class="text-center">FİLM LİSTESİ</h1>
+        <hr>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Film Adı</th>
+                <th>Puanı</th>
+                <th>Fragman</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.rank</td>
+                    <td>@item.title</td>
+                    <td>@item.rating</td>
+                    <td><a href="#" class="btn btn-primary">İzle</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

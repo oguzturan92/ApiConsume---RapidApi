@@ -1,0 +1,33 @@
+@model List<TestimonialListModel>
+@{
+    ViewData["Title"] = "Referans Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>REFERANS LİSTESİ</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Adı</th>
+            <th>Ünvan</th>
+            <th>Resim</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TestimonialId</td>
+                <td>@item.TestimonialName</td>
+                <td>@item.TestimonialTitle</td>
+                <td>@item.TestimonialImage</td>
+                <td><a class="btn btn-primary" asp-controller="Testimonial" asp-action="TestimonialUpdate" asp-route-id="@item.TestimonialId">Güncelle</a></td>
+                <td><a class="btn btn-danger" asp-controller="Testimonial" asp-action="TestimonialDelete" asp-route-id="@item.TestimonialId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-success" asp-controller="Testimonial" asp-action="TestimonialCreate">Yeni Oluştur</a>

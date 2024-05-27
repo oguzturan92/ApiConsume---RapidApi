@@ -1,0 +1,31 @@
+@model List<GuestListDto>
+@{
+    ViewData["Title"] = "Misafir Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>MİSAFİR LİSTESİ</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>Şehir</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.GuestId</td>
+                <td>@item.GuestName @item.GuestSurname</td>
+                <td>@item.GuestCity</td>
+                <td><a class="btn btn-primary" asp-controller="Guest" asp-action="GuestUpdate" asp-route-id="@item.GuestId">Güncelle</a></td>
+                <td><a class="btn btn-danger" asp-controller="Guest" asp-action="GuestDelete" asp-route-id="@item.GuestId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-success" asp-controller="Guest" asp-action="GuestCreate">Yeni Oluştur</a>

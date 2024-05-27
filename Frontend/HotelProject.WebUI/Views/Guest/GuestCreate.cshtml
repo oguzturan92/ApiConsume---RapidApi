@@ -1,0 +1,19 @@
+@model GuestCreateDto
+@{
+    ViewData["Title"] = "Misafir Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Guest" asp-action="GuestCreate" method="post">
+    <h3>MİSAFİR EKLE</h3>
+    <hr>
+    <label>Adı</label>
+    <input type="text" asp-for="GuestName" class="form-control">
+    <label>Soyadı</label>
+    <input type="text" asp-for="GuestSurname" class="form-control">
+    <label>Şehir</label>
+    <input type="text" asp-for="GuestCity" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Guest" asp-action="GuestList">Geri</a>
+</form>

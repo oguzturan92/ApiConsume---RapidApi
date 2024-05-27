@@ -1,0 +1,39 @@
+@model RegisterDto
+@{
+    ViewData["Title"] = "Kayıt Ol";
+    Layout = "_LayoutAdminUser";
+}
+
+
+<div class="card-body pt-5">
+    <a class="text-center"><h4>Kayıt Ol</h4></a>
+    <form class="mt-5 mb-5 login-input" asp-controller="User" asp-action="UserRegister">
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="Ad" asp-for="Name" required>
+            <span asp-validation-for="Name" class="text-danger d-block"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="Soyad" asp-for="Surname" required>
+            <span asp-validation-for="Surname" class="text-danger d-block"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="Kullanıcı Adı" asp-for="UserName" required>
+            <span asp-validation-for="UserName" class="text-danger d-block"></span>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control"  placeholder="Email" asp-for="Email" required>
+            <span asp-validation-for="Email" class="text-danger d-block"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Şifre" asp-for="Password" required>
+            <span asp-validation-for="Password" class="text-danger d-block"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Şifre Tekrar" asp-for="RePassword" required>
+            <span asp-validation-for="RePassword" class="text-danger d-block"></span>
+        </div>
+        <button class="btn login-form__btn submit w-100">Kayıt Ol</button>
+    </form>
+    <p class="mt-5 login-form__footer">Zaten bir hesabınız varsa <a asp-controller="User" asp-action="UserLogin" class="text-primary">giriş yap</a>'a dön</p>
+    </div>
+</div>

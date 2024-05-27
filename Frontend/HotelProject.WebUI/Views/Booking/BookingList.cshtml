@@ -1,0 +1,34 @@
+@model List<BookingListDto>
+@{
+    ViewData["Title"] = "Rezervasyon Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>REZERVASYON  LİSTESİ</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>Giriş</th>
+            <th>Çıkış</th>
+            <th>Durum</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BookingId</td>
+                <td>@item.BookingName</td>
+                <td>@item.BookingCheckin</td>
+                <td>@item.BookingCheckout</td>
+                <td>@item.BookingStatus</td>
+                <td><a class="btn btn-primary" asp-controller="Booking" asp-action="BookingUpdate" asp-route-id="@item.BookingId">Güncelle</a></td>
+                <td><a class="btn btn-danger" asp-controller="Booking" asp-action="BookingDelete" asp-route-id="@item.BookingId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

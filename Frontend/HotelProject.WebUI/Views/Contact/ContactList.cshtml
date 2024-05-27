@@ -1,0 +1,32 @@
+@model List<ContactListDto>
+@{
+    ViewData["Title"] = "Mesaj Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>MESAJ LİSTESİ | @ViewBag.messageCount adet mesaj bulundu</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>Email</th>
+            <th>Tarih</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ContactId</td>
+                <td>@item.ContactName</td>
+                <td>@item.ContactEmail</td>
+                <td>@item.ContactDate</td>
+                <td><a class="btn btn-warning" asp-controller="Contact" asp-action="ContactUpdate" asp-route-id="@item.ContactId">Detay</a></td>
+                <td><a class="btn btn-danger" asp-controller="Contact" asp-action="ContactDelete" asp-route-id="@item.ContactId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

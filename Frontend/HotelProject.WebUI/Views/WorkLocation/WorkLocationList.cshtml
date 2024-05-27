@@ -1,0 +1,31 @@
+@model List<WorkLocationListDto>
+@{
+    ViewData["Title"] = "Çalışma Alanı Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+<table class="table table-bordered">
+    <h3>HAKKIMIZDA LİSTESİ</h3>
+    <hr>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Şehir</th>
+            <th colspan="2"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.WorkLocationId</td>
+                <td>@item.WorkLocationName</td>
+                <td>@item.WorkLocationCity</td>
+                <td><a class="btn btn-primary" asp-controller="WorkLocation" asp-action="WorkLocationUpdate" asp-route-id="@item.WorkLocationId">Güncelle</a></td>
+                <td><a class="btn btn-danger" asp-controller="WorkLocation" asp-action="WorkLocationDelete" asp-route-id="@item.WorkLocationId">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-success" asp-controller="WorkLocation" asp-action="WorkLocationCreate">Yeni Oluştur</a>

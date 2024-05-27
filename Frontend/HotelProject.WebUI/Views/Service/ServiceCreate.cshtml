@@ -1,0 +1,22 @@
+@model ServiceCreateDto
+@{
+    ViewData["Title"] = "Servis Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Service" asp-action="ServiceCreate" method="post">
+    <h3>SERVİS EKLE</h3>
+    <hr>
+    <label>İkon</label>
+    <input type="text" asp-for="ServiceIcon" class="form-control">
+    <span asp-validation-for="ServiceIcon" class="text-danger d-block"></span>
+    <label>Başlık</label>
+    <input type="text" asp-for="ServiceTitle" class="form-control">
+    <span asp-validation-for="ServiceTitle" class="text-danger d-block"></span>
+    <label>Açıklama</label>
+    <input type="text" asp-for="ServiceDescription" class="form-control">
+    <span asp-validation-for="ServiceDescription" class="text-danger d-block"></span>
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Service" asp-action="ServiceList">Geri</a>
+</form>
