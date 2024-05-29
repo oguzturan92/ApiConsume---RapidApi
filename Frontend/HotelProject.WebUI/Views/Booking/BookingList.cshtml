@@ -14,6 +14,9 @@
             <th>Giriş</th>
             <th>Çıkış</th>
             <th>Durum</th>
+            <th>Onayla</th>
+            <th>Beklet</th>
+            <th>İptal Et</th>
             <th colspan="2"></th>
         </tr>
     </thead>
@@ -25,7 +28,45 @@
                 <td>@item.BookingName</td>
                 <td>@item.BookingCheckin</td>
                 <td>@item.BookingCheckout</td>
-                <td>@item.BookingStatus</td>
+
+                @if (item.BookingStatus == "Onaylandı")
+                {
+                    <td><span class="badge badge-pill badge-success">@item.BookingStatus</span></td>
+                } else
+                {
+                    @if (item.BookingStatus == "İptal Edildi")
+                    {
+                        <td><span class="badge badge-pill badge-danger">@item.BookingStatus</span></td>
+                    } else
+                    {
+                        <td><span class="badge badge-pill badge-primary">@item.BookingStatus</span></td>
+                    }
+                }
+                
+                @if (item.BookingStatus == "Onaylandı")
+                {
+                    <td><a class="btn btn-outline-light" style="cursor: no-drop;" disabled>@item.BookingStatus</a></td>
+                } else
+                {
+                    <td><a class="btn btn-warning" asp-controller="Booking" asp-action="BookingApproved" asp-route-id="@item.BookingId">Onayla</a></td>
+                }
+
+                @if (item.BookingStatus == "Beklemede")
+                {
+                    <td><a class="btn btn-outline-light" style="cursor: no-drop;" disabled>@item.BookingStatus</a></td>
+                } else
+                {
+                    <td><a class="btn btn-info" asp-controller="Booking" asp-action="BookingWait" asp-route-id="@item.BookingId">Beklet</a></td>
+                }
+
+                @if (item.BookingStatus == "İptal Edildi")
+                {
+                    <td><a class="btn btn-outline-light" style="cursor: no-drop;" disabled>@item.BookingStatus</a></td>
+                } else
+                {
+                    <td><a class="btn btn-danger" asp-controller="Booking" asp-action="BookingCancel" asp-route-id="@item.BookingId">İptal Et</a></td>
+                }
+
                 <td><a class="btn btn-primary" asp-controller="Booking" asp-action="BookingUpdate" asp-route-id="@item.BookingId">Güncelle</a></td>
                 <td><a class="btn btn-danger" asp-controller="Booking" asp-action="BookingDelete" asp-route-id="@item.BookingId">Sil</a></td>
             </tr>

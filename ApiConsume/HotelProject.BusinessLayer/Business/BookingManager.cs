@@ -20,6 +20,11 @@ namespace HotelProject.BusinessLayer.Business
             _bookingDal.Delete(entity);
         }
 
+        public int GetBookingCount()
+        {
+            return _bookingDal.GetBookingCount();
+        }
+
         public Booking GetById(int id)
         {
             return _bookingDal.GetById(id);
@@ -33,6 +38,11 @@ namespace HotelProject.BusinessLayer.Business
         public void Insert(Booking entity)
         {
             _bookingDal.Insert(entity);
+        }
+
+        public List<Booking> Last6Booking()
+        {
+            return _bookingDal.Last6Booking();
         }
 
         public void Update(Booking entity)

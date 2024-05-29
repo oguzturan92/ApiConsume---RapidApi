@@ -1,0 +1,37 @@
+@model List<AppRole>
+@{
+    ViewData["Title"] = "Rol Listesi";
+    Layout = "_LayoutAdmin";
+}
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-bordered">
+        <h3>ROL LİSTESİ</h3>
+        <hr>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ad</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td><a class="btn btn-primary" asp-controller="Role" asp-action="RoleUpdate" asp-route-id="@item.Id">Güncelle</a></td>
+                    <td><a class="btn btn-danger" asp-controller="Role" asp-action="RoleDelete" asp-route-id="@item.Id">Sil</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+} else
+{
+    <div class="alert alert-warning" role="alert">
+        Kayıt bulunmuyor
+    </div>
+}
+<a class="btn btn-success" asp-controller="Role" asp-action="RoleCreate">Yeni Oluştur</a>

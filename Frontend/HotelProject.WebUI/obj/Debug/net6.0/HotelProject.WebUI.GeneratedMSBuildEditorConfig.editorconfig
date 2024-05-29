@@ -75,12 +75,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3Vlc3RcR3Vlc3RVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Home/AdminIndex.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Role/RoleCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxSb2xlQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Role/RoleList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxSb2xlTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Role/RoleUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxSb2xlVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Room/RoomCreate.cshtml]
@@ -109,6 +117,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Shared/Components/AboutPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQWJvdXRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Shared/Components/DashboardRow1/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGFzaGJvYXJkUm93MVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Shared/Components/DashboardRow2/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGFzaGJvYXJkUm93MlxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Shared/Components/DashboardRow3/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGFzaGJvYXJkUm93M1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Shared/Components/DashboardRow4/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRGFzaGJvYXJkUm93NFxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/Shared/Components/RoomPartial/Default.cshtml]
@@ -189,6 +213,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/User/UserRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/User/UserRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/User/UserUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/proje/API-RapidApi-ApiConsume/Frontend/HotelProject.WebUI/Views/WorkLocation/WorkLocationCreate.cshtml]

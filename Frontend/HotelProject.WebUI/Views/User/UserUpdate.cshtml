@@ -1,0 +1,26 @@
+@model UserUpdateModel
+@{
+    ViewData["Title"] = "Kullanıcı Güncelle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="User" asp-action="UserUpdate" method="post">
+    <h3>KULLANICI GÜNCELLE</h3>
+    <hr>
+    <input type="hidden" asp-for="Id">
+    <label>Ad</label>
+    <input type="text" asp-for="Name" class="form-control">
+    <label>Soyad</label>
+    <input type="text" asp-for="Surname" class="form-control">
+    <label>Şehir</label>
+    <input type="text" asp-for="City" class="form-control">
+    <label>Email</label>
+    <input type="text" asp-for="Email" class="form-control">
+    <label>Şifre</label>
+    <input type="password" asp-for="Password" class="form-control">
+    <label>Şifre Tekrar</label>
+    <input type="password" asp-for="RePassword" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="User" asp-action="UserList">Geri</a>
+</form>

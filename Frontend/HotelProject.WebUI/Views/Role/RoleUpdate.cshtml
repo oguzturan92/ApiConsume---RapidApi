@@ -1,0 +1,16 @@
+@model RoleUpdateModel
+@{
+    ViewData["Title"] = "RoleUpdate";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Role" asp-action="RoleUpdate" method="post">
+    <h3>ROL DÜZENLE</h3>
+    <hr>
+    <input type="hidden" asp-for="Id">
+    <label>Ad</label>
+    <input type="text" asp-for="Name" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Role" asp-action="RoleList">Geri</a>
+</form>

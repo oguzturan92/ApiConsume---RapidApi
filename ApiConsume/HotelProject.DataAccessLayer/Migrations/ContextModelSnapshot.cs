@@ -188,6 +188,12 @@ namespace HotelProject.DataAccessLayer.Migrations
                     b.Property<string>("BookingChildCount")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("BookingCity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BookingCountry")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("BookingDescription")
                         .HasColumnType("nvarchar(max)");
 

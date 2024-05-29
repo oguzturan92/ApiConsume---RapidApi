@@ -1,4 +1,4 @@
-@model List<AppUser>
+@model List<AppUserListDto>
 @{
     ViewData["Title"] = "UserList";
     Layout = "_LayoutAdmin";
@@ -11,7 +11,7 @@
         <tr>
             <th>ID</th>
             <th>Username</th>
-            <th colspan="2"></th>
+            <th colspan="3"></th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +20,7 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.UserName</td>
+                <td><a class="btn btn-warning" asp-controller="User" asp-action="UserRole" asp-route-id="@item.Id">Rol Yönetimi</a></td>
                 <td><a class="btn btn-primary" asp-controller="User" asp-action="UserUpdate" asp-route-id="@item.Id">Güncelle</a></td>
                 <td><a class="btn btn-danger" asp-controller="User" asp-action="UserDelete" asp-route-id="@item.Id">Sil</a></td>
             </tr>

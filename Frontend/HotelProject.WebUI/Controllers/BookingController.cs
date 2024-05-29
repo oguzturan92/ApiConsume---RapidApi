@@ -68,6 +68,48 @@ namespace HotelProject.WebUI.Controllers
             return View();
         }
 
+        // ONAY --------------------------------------------------------------------------
+        [HttpGet]
+        public async Task<IActionResult> BookingApproved(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5255/api/Booking/BookingApproved/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("BookingList", "Booking");
+            }
+            // Güncelleme başarısız mesajı
+            return RedirectToAction("BookingList", "Booking");
+        }
+
+        // İPTAL --------------------------------------------------------------------------
+        [HttpGet]
+        public async Task<IActionResult> BookingCancel(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5255/api/Booking/BookingCancel/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("BookingList", "Booking");
+            }
+            // Güncelleme başarısız mesajı
+            return RedirectToAction("BookingList", "Booking");
+        }
+
+        // BEKLEME --------------------------------------------------------------------------
+        [HttpGet]
+        public async Task<IActionResult> BookingWait(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5255/api/Booking/BookingWait/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("BookingList", "Booking");
+            }
+            // Güncelleme başarısız mesajı
+            return RedirectToAction("BookingList", "Booking");
+        }
+
         // SİLME --------------------------------------------------------------------------
         public async Task<IActionResult> BookingDelete(int id)
         {
@@ -91,7 +133,7 @@ namespace HotelProject.WebUI.Controllers
         {
             // if (ModelState.IsValid)
             // {
-                bookingCreateDto.BookingStatus = "Onay Bekliyor";
+                bookingCreateDto.BookingStatus = "Beklemede";
                 var client = _httpClientFactory.CreateClient();
                 var jsonData = JsonConvert.SerializeObject(bookingCreateDto);
                 StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");

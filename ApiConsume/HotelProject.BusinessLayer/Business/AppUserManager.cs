@@ -15,6 +15,12 @@ namespace HotelProject.BusinessLayer.Business
         {
             _appUserDal = appUserDal;
         }
+
+        public int AppUserCount()
+        {
+            return _appUserDal.AppUserCount();
+        }
+
         public void Delete(AppUser entity)
         {
             _appUserDal.Delete(entity);

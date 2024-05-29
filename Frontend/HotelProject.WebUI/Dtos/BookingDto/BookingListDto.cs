@@ -17,6 +17,8 @@ namespace HotelProject.WebUI.Dtos.BookingDto
         public string BookingRoomCount { get; set; }
         public string BookingSpecialRequest { get; set; }
         public string BookingDescription { get; set; }
+        public string BookingCountry { get; set; }
+        public string BookingCity { get; set; }
         public string BookingStatus { get; set; }
     }
 }

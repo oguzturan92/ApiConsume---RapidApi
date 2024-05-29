@@ -60,5 +60,35 @@ namespace HotelProject.WebApi.Controllers
             return Ok();
         }
 
+        // ONAYLA ----------------------------------------------------------------------
+        [HttpGet("BookingApproved/{id}")]
+        public IActionResult BookingApproved(int id)
+        {
+            var booking = _bookingService.GetById(id);
+            booking.BookingStatus = "Onaylandı";
+            _bookingService.Update(booking);
+            return Ok();
+        }
+
+        // İPTAL ----------------------------------------------------------------------
+        [HttpGet("BookingCancel/{id}")]
+        public IActionResult BookingCancel(int id)
+        {
+            var booking = _bookingService.GetById(id);
+            booking.BookingStatus = "İptal Edildi";
+            _bookingService.Update(booking);
+            return Ok();
+        }
+
+        // BEKLEME ----------------------------------------------------------------------
+        [HttpGet("BookingWait/{id}")]
+        public IActionResult BookingWait(int id)
+        {
+            var booking = _bookingService.GetById(id);
+            booking.BookingStatus = "Beklemede";
+            _bookingService.Update(booking);
+            return Ok();
+        }
+
     }
 }

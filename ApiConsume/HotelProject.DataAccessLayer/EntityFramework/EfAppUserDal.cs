@@ -12,6 +12,14 @@ namespace HotelProject.DataAccessLayer.EntityFramework
 {
     public class EfAppUserDal : GenericRepository<AppUser>, IAppUserDal
     {
+        public int AppUserCount()
+        {
+            using (var context = new Context())
+            {
+                return context.Users.Count();
+            }
+        }
+
         public List<AppUser> UserListAndWorkLocation()
         {
             using (var context = new Context())

@@ -9,5 +9,6 @@ namespace HotelProject.BusinessLayer.Abstract
     public interface IAppUserService : IGenericService<AppUser>
     {
         List<AppUser> UserListAndWorkLocation();
+        int AppUserCount();
     }
 }

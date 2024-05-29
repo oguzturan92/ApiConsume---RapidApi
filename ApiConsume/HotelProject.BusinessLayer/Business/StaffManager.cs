@@ -30,6 +30,16 @@ namespace HotelProject.BusinessLayer.Business
             return _staffDal.GetList();
         }
 
+        public int GetStaffCount()
+        {
+            return _staffDal.GetStaffCount();
+        }
+
+        public List<Staff> GetStaffLast4()
+        {
+            return _staffDal.GetStaffLast4();
+        }
+
         public void Insert(Staff entity)
         {
             _staffDal.Insert(entity);

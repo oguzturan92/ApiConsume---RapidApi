@@ -12,9 +12,5 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    public IActionResult AdminIndex()
-    {
-        return View();
-    }
+    
 }

@@ -1,0 +1,49 @@
+@model List<BookingListGet6Dto>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="active-member">
+                        <div class="table-responsive">
+                            <table class="table table-xs mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Ad Soyad</th>
+                                        <th>Şehir</th>
+                                        <th>Ülke</th>
+                                        <th>Email</th>
+                                        <th>Giriş</th>
+                                        <th>Çıkış</th>
+                                        <th>Onay Durumu</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.BookingName</td>
+                                            <td>@item.BookingCity</td>
+                                            <td>@item.BookingCountry</td>
+                                            <td>@item.BookingMail</td>
+                                            <td>@item.BookingCheckin.ToString("dd.MM.yyyy")</td>
+                                            <td>@item.BookingCheckout.ToString("dd.MM.yyyy")</td>
+                                            <td>
+                                                @if (item.BookingStatus == "Onaylandı")
+                                                {
+                                                    <i class="fa fa-circle-o text-success mr-2"></i><span>Onaylı</span>
+                                                } else
+                                                {
+                                                    <i class="fa fa-circle-o text-warning mr-2"></i><span>@item.BookingStatus</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>                        
+        </div>
+    </div>

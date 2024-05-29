@@ -1,0 +1,15 @@
+@model RoleCreateModel
+@{
+    ViewData["Title"] = "Rol Ekle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="Role" asp-action="RoleCreate" method="post">
+    <h3>ROL EKLE</h3>
+    <hr>
+    <label>Ad</label>
+    <input type="text" asp-for="Name" class="form-control">
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="Role" asp-action="RoleList">Geri</a>
+</form>

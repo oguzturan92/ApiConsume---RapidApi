@@ -1,0 +1,25 @@
+@model UserRoleModel
+@{
+    ViewData["Title"] = "Role Düzenle";
+    Layout = "_LayoutAdmin";
+}
+
+<form asp-controller="User" asp-action="UserRole" method="post">
+    <h3>ROL YÖNETİMİ</h3>
+    <hr>
+    <input type="hidden" asp-for="UserId">
+    <div class="form-group">
+        @foreach (var roleName in Model.Roles)
+        {
+            <div class="form-check mb-3">
+                <label class="form-check-label" for="@roleName">
+                <input type="checkbox" class="form-check-input" name="userNewRoles" id="@roleName" value="@roleName" @(Model.UserRoles.Any(i => i == roleName) ? "checked" : "")>@roleName</label>
+            </div>
+        }
+        
+    </div>
+
+    <hr>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a class="btn btn-outline-dark" asp-controller="User" asp-action="UserList">Geri</a>
+</form>
