@@ -1,0 +1,18 @@
+- Kendi Apimizi Oluşturmayı
+- Api Consume Etmeyi
+- Dışarıdan Api Çekmeyi
+- Api'lerde Nested Yapıları
+- Sosyal Medya Hesaplarından Ver Çekmei
+- Dto kullanımını
+- Rapid Api Kullanımını
+- Identity İşlemlerini
+- Identity Rol işlemlerini
+- JWT Kullanımını
+- Auto Mapperı
+- Api'de Entitye Özgü Metot Kullanımını
+- Repository Design Patternı
+- Fluent Validationı
+- Mail İşlemlerini
+- Authorize Ve AloowAnonymousu
+- İlişkili Tabloları
+kullandık
